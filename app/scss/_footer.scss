@@ -1,0 +1,57 @@
+.footer {
+    background-color: hsl(168, 39%, 58%);
+    text-align: center;
+    padding-top: 65px;
+    padding-right: 40px;
+    padding-bottom: 65px;
+    padding-left: 40px;
+
+    @include breakpoint_up(large){
+        padding-top: 75px;
+        padding-bottom: 54px;
+    }
+    &__logo {
+        
+        svg {
+            path {
+                fill: $darkDesaturatedCyan;
+            }
+        }    
+    }
+
+    &__menu {
+        padding-top: 48px;
+        padding-bottom: 90px;
+
+        @include breakpoint_up(large){
+            padding-bottom: 80px;
+        }
+        a{
+            color: $darkDesaturatedCyan;
+            font-size: 17px;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        a:not(:last-child){
+            padding-right: 57px;
+        }
+        
+    }
+
+    &__socials {
+        padding-bottom: 16px;
+
+        a:hover {
+            svg path {
+                fill: $white;
+            }
+        }
+        a:not(:last-child){
+            padding-right: 30px;
+        }
+    }
+}

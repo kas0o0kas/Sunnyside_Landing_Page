@@ -1,0 +1,57 @@
+.image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    div {
+        width: 100%;
+        height: 190px;
+        @include breakpoint-up(large){
+            height: 446px;
+        }
+    }
+
+    @include breakpoint-up(large){
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    &__milk {
+        background-image: url(/images/mobile/image-gallery-milkbottles.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include breakpoint_up(large){
+            background-image: url(/images/desktop/image-gallery-milkbottles.jpg);
+        }
+    }
+
+    &__orange {
+        background-image: url(/images/mobile/image-gallery-orange.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include breakpoint_up(large){
+            background-image: url(/images/desktop/image-gallery-orange.jpg);
+        }
+    }
+
+    &__cone {
+        background-image: url(/images/mobile/image-gallery-cone.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        @include breakpoint_up(large){
+            background-image: url(/images/desktop/image-gallery-cone.jpg);
+        }
+    }
+
+    &__sugar {
+        background-image: url(/images/mobile/image-gallery-sugar-cubes.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        @include breakpoint_up(large){
+            background-image: url(/images/desktop/image-gallery-sugarcubes.jpg);
+        }
+    }
+}
